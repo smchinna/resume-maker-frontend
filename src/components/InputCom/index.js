@@ -3,9 +3,9 @@ import styled from 'styled-components';
 
 const CustomInput = styled.input`
   height: 46px;
-  width: calc(100% - 40px);
+  width: calc(100% - 80px);
   border: 1px solid #eaeaea;
-  padding: 0 20px 0 20px;
+  padding: 0 30px 0 44px;
   background-color: ${({ filled }) => filled && '#e7f5fa'};
   outline: none;
   font-size: 16px;
