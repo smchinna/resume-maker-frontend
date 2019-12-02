@@ -36,7 +36,7 @@ class App extends React.Component {
               />
               <Route 
                 exact path="/"
-                component={() => <Redirect to="/login"/>}
+                component={() => <Redirect to="/drag"/>}
               />
               <Route
                 path="/login"
