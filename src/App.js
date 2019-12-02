@@ -13,6 +13,7 @@ const history = createBrowserHistory();
 const SignIn = lazy(() => import('./container/SignIn'));
 const Signup = lazy(() => import('./container/SignUp'));
 const Resume = lazy(() => import('./container/Resume'));
+const Draggable = lazy(() => import('./container/DragAndDrop'));
 
 const commonSuspenseFunc = (SuspenseCom) => {
   return (
@@ -29,6 +30,10 @@ class App extends React.Component {
         <Provider store={store}>
           <ConnectedRouter history={history}>
             <Switch>
+              <Route 
+                path="/drag"
+                component={() => commonSuspenseFunc(Draggable)}
+              />
               <Route 
                 exact path="/"
                 component={() => <Redirect to="/login"/>}
